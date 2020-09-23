@@ -1,0 +1,132 @@
+.topLine {
+    background-color: $lightBg;
+
+    &__wrapper,
+    &__contacts {
+        @include row-flex();
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__wrapper {
+        @include col();
+    }
+
+    &__contacts {
+        @include col();
+        @include size(4);
+        @include size-sm(12);
+        @include size-md(12);
+        @include size-lg(5);
+        @include to(768px) {
+            justify-content: space-evenly;
+            padding-top: rem(10);
+        };
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__socials {
+        @include col();
+        @include size(4);
+        @include size-sm(12);
+        @include size-md(12);
+        @include size-lg(4);
+        display: flex;
+        align-items: center;
+    }
+
+    &__social {
+        width: 100%;
+        display: block;
+        text-align: center;
+
+        &--fb:hover > .topLine__social-link {
+            color: $white;
+            background-color: $fbBg;
+        }
+        &--gplus:hover > .topLine__social-link {
+            color: $white;
+            background-color: $gplusBg;
+        }
+        &--twitter:hover > .topLine__social-link {
+            color: $white;
+            background-color: $twitterBg;
+        }
+        &--pinterest:hover > .topLine__social-link {
+            color: $white;
+            background-color: $pinterestBg;
+        }
+        &--behance:hover > .topLine__social-link {
+            color: $white;
+            background-color: $behanceBg;
+        }
+        &--dribble:hover > .topLine__social-link {
+            color: $white;
+            background-color: $dribbleBg;
+        }
+    }
+
+    &__social-link {
+        width: 100%;
+        display: block;
+        padding: rem(10);
+        color: $textColorSecond;
+        transition: .3s all;
+    }
+
+    &__mail,
+    &__phone {
+        // display: inline-block;
+        // vertical-align: middle;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        // overflow: hidden;
+
+        &::before {
+            content: "";
+            height: 1px;
+            position: absolute;
+            right: 100%;
+            bottom: -2px;
+            left: 0;
+            background: $textColorSecond;
+            transition-property: right;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            z-index: -1;
+        }
+
+        &:hover::before,
+        &:focus::before,
+        &:active::before {
+            right: 0;
+            color: $darkBg;
+        }
+    }
+
+    &__link {
+        font-size: rem(12);
+        font-weight: 400;
+        color: $textColorSecond;
+
+        &:hover {
+            color: $darkBg;
+        }
+    }
+
+    &__svg {
+        width: rem(10);
+        height: rem(10);
+        margin-right: rem(5);
+    }
+
+    &__social-svg {
+        width: rem(15);
+        height: rem(15);
+    }
+}
