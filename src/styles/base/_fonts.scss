@@ -1,0 +1,7 @@
+@import "../helpers/mixins";
+@import "../helpers/variables";
+
+@include font("Lato", normal, 400, "#{$pathFont}/Lato-Regular.woff2");
+@include font("LatoBold", normal, 700, "#{$pathFont}/Lato-Bold.woff2");
+@include font("SourceSans", normal, 400, "#{$pathFont}/SourceSansPro-Regular.woff2");
+@include font("SourceSansBold", normal, 700, "#{$pathFont}/SourceSansPro-Bold.woff2");
