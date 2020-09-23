@@ -20,7 +20,7 @@
         @include size-lg(5);
         @include to(768px) {
             justify-content: space-evenly;
-            padding-top: rem(10);
+            padding: rem(10) 0;
         };
         display: flex;
         justify-content: space-between;

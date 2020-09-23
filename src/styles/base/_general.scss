@@ -63,3 +63,42 @@ input[type="radio"].visually-hidden {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.title {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-size: rem(44);
+    font-weight: 700;
+    letter-spacing: 0.44px;
+    color: $textColorSecond;
+    text-align: center;
+
+    @include to(992px) {
+        font-size: rem(40);
+    }
+    @include to(768px) {
+        font-size: rem(34);
+    }
+    @include to(576px) {
+        font-size: rem(28);
+    }
+}
+
+.text {
+    font-family: "SourceSans", Arial, Helvetica, sans-serif;
+    font-size: rem(22);
+    line-height: rem(34);
+    font-weight: 400;
+    letter-spacing: 0.22px;
+    color: $textColorMain;
+    text-align: center;
+
+    @include to(992px) {
+        font-size: rem(20);
+    }
+    @include to(768px) {
+        font-size: rem(18);
+    }
+    @include to(576px) {
+        font-size: rem(16);
+    }
+}
