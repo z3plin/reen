@@ -25,6 +25,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 0;
     }
 
     &__socials {
@@ -35,6 +36,7 @@
         @include size-lg(4);
         display: flex;
         align-items: center;
+        margin: 0;
     }
 
     &__social {
