@@ -13,30 +13,6 @@
         }
     }
 
-    &__title {
-        @include size(8);
-        margin: 0 auto rem(30);
-
-        @include to(992px) {
-            @include size(10);
-        }
-        @include to(768px) {
-            @include size(12);
-        }
-    }
-
-    &__text {
-        @include size(9);
-        margin: 0 auto;
-
-        @include to(992px) {
-            @include size(10);
-        }
-        @include to(768px) {
-            @include size(12);
-        }
-    }
-
     &__list {
         @include row-flex();
         @include to(992px) {

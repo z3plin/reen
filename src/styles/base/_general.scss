@@ -65,6 +65,7 @@ input[type="radio"].visually-hidden {
 }
 
 .title {
+    margin: 0 auto rem(30);
     font-family: "Lato", Arial, Helvetica, sans-serif;
     font-size: rem(44);
     font-weight: 700;
@@ -72,10 +73,14 @@ input[type="radio"].visually-hidden {
     color: $textColorSecond;
     text-align: center;
 
+    @include size(8); 
+   
     @include to(992px) {
+        @include size(10);
         font-size: rem(40);
     }
     @include to(768px) {
+        @include size(12);
         font-size: rem(34);
     }
     @include to(576px) {
@@ -84,6 +89,7 @@ input[type="radio"].visually-hidden {
 }
 
 .text {
+    margin: 0 auto;
     font-family: "SourceSans", Arial, Helvetica, sans-serif;
     font-size: rem(22);
     line-height: rem(34);
@@ -92,13 +98,18 @@ input[type="radio"].visually-hidden {
     color: $textColorMain;
     text-align: center;
 
+    @include size(9);
+    
     @include to(992px) {
+        @include size(10);
         font-size: rem(20);
     }
     @include to(768px) {
+        @include size(12);
         font-size: rem(18);
     }
     @include to(576px) {
         font-size: rem(16);
+        line-height: rem(28);
     }
 }

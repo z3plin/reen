@@ -1,0 +1,53 @@
+.works {
+    padding: rem(100) 0;
+    background-color: $lightBg;
+
+    @include to(768px) {
+        padding: rem(70) 0;
+    }
+
+    &__row {
+        @include col();
+
+        &:not(:last-child) {
+            margin-bottom: rem(60);
+        }
+    }
+
+    &__list {
+        @include row-flex();
+        @include to(992px) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        @include col();
+        @include size(6);
+        @include size-md(12);
+        display: flex;
+        justify-content: center;
+
+        @include to(768px) {
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+        }
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.works-slide {
+    background: $darkBg;
+}
