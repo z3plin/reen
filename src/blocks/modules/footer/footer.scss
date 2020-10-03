@@ -1,0 +1,27 @@
+.pageFooter {
+    background-color: $darkBg;
+}
+
+.darkBg {
+    background-color: $darkenBg;
+}
+
+.footer {
+    &__row {
+        @include container();
+        @include col();
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    &__col {
+        @include col();
+        @include size(3);
+    }
+}
+
+svg {
+    width: rem(20);
+    height: rem(20);
+}

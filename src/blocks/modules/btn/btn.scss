@@ -20,6 +20,12 @@
         min-width: rem(160);
     }
 
+    &__contactUs {
+      max-width: rem(160);
+      margin: 0 auto;
+      margin-top: rem(40);
+    }
+
     &:hover,
     &:focus {
         color: darken($color: $white, $amount: 20%);
