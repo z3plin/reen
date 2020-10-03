@@ -27,6 +27,7 @@
         @include size-md(12);
         display: flex;
         justify-content: center;
+        background-color: $white;
 
         @include to(768px) {
             &:not(:last-child) {
@@ -34,11 +35,66 @@
             }
         }
     }
+
+    &__item-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: rem(20) 0;
+        text-align: center;
+        color: $textColorSecond;
+
+        .item-content__title {
+            font-family: "Lato", Arial, Helvetica, sans-serif;
+            font-size: rem(20);
+            line-height: rem(26);
+            font-weight: 700;
+        }
+
+        .item-content__text {
+            margin: 0;
+            margin-top: rem(10);
+            font-family: "SourceSans", Arial, Helvetica, sans-serif;
+            font-size: rem(14);
+            line-height: rem(22);
+            color: $textColorMain;
+        }
+    }
 }
 
-.swiper-container {
+.worksSlider-container {
     width: 100%;
     height: 100%;
+
+    .swiper-pagination {
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        margin: 0 auto;
+        transform: translateX(-50%);
+    }
+
+    .swiper-pagination-bullet {
+        width: rem(10);
+        height: rem(10);
+        display: block;
+        background-color: $textColorSecond;
+        border-radius: 50%;
+
+        &:hover,
+        &:focus {
+            background-color: $green;
+        }
+    }
+
+    .swiper-pagination-current {
+        background-color: $green;
+    }
 }
 
 .swiper-slide {
@@ -46,8 +102,81 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0;
 }
 
 .works-slide {
-    background: $darkBg;
+    background: $white;
+    overflow: hidden;
+}
+
+.workSlide__content {
+    width: 100%;
+    height: auto;
+}
+
+.works-button-next,
+.works-button-prev {
+    width: rem(30);
+    height: rem(30);
+    position: absolute;
+    bottom: 2%;
+    transform: translateY(-50%);
+    color: $white;
+    background-color: #c9d2da;
+    transition: .3s all;
+    z-index: 1;
+    cursor: pointer;
+    @include to(576px) {
+        width: rem(20);
+        height: rem(50);
+    }
+
+    &:hover > .button-next,
+    &:focus > .button-next,
+    &:hover > .button-prev,
+    &:focus > .button-prev {
+        color: $green;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: rgba($color: $textColorSecond, $alpha: 1.0);
+    }
+}
+
+.works__svg {
+    width: rem(15);
+    height: rem(15);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include to(576px) {
+        width: rem(15);
+        height: rem(15);
+    }
+}
+
+.works-button-next {
+    position: absolute;
+    bottom: 2%;
+    right: 10%;
+    transition: .3s all;
+}
+
+.works-button-prev {
+    position: absolute;
+    bottom: 2%;
+    left: 10%;
+    transform: rotate(-90deg) translateX(50%);
+    transition: .3s all;
+}
+
+.works__svg--prev {
+    transform: rotate(-90deg);
+}
+
+.works__svg--next {
+    transform: rotate(90deg);
 }
