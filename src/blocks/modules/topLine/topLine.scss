@@ -19,8 +19,7 @@
         @include size-md(12);
         @include size-lg(5);
         @include to(768px) {
-            justify-content: space-evenly;
-            padding: rem(10) 0;
+            display: none;
         };
         display: flex;
         justify-content: space-between;
@@ -34,6 +33,9 @@
         @include size-sm(12);
         @include size-md(12);
         @include size-lg(4);
+        @include to (768px) {
+            margin: 0 auto;
+        }
         display: flex;
         align-items: center;
         margin: 0;
@@ -80,14 +82,11 @@
 
     &__mail,
     &__phone {
-        // display: inline-block;
-        // vertical-align: middle;
         display: flex;
         align-items: center;
         position: relative;
         transform: perspective(1px) translateZ(0);
         box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        // overflow: hidden;
 
         &::before {
             content: "";

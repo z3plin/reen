@@ -17,16 +17,31 @@
         @include col();
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin: 0 auto;
     }
 
     &__col {
         @include col();
         @include size(3);
+        @include size-xl(3);
+        // @include size-lg(6);
+        @include size-md(6);
+        @include size-sm(12);
+        @include to (576px) {
+            margin-top: rem(20);
+        }
+        display: flex;
 
         &-content {
             margin: rem(70) 0;
             color: $textColorFooter;
+            @include to (992px) {
+                margin: rem(30) 0 rem(20) 0;
+            }
+            @include to (576px) {
+                margin: rem(20) 0;
+            }
         }
     }
 
@@ -76,10 +91,8 @@
     }
 
     &__tile {
-        // width: calc(100% / 12 * 6 - 5px);
         position: relative;
         margin: 0 rem(5) rem(15) 0;
-        // overflow: hidden;
 
         &:nth-child(2n) {
             margin-right: 0;
@@ -147,11 +160,29 @@
 
     &__copy {
         @include col();
+        @include size-sm(12);
+        @include to (768px) {
+            text-align: center;
+        }
+        @include to (709px) {
+            @include size(12);
+        }
         color: #707e8c;
     }
 
     &__menu {
         @include col();
+        @include size-sm(12);
+        @include to (460px) {
+            display: none;
+            visibility: hidden;
+        }
+        @include to (709px) {
+            @include size(12);
+            margin-top: rem(20);
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 }
 

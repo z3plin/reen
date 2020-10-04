@@ -79,6 +79,10 @@
     width: 100%;
     height: 100%;
     position: relative;
+    @include to (768px) {
+        display: none;
+        visibility: hidden;
+    }
 
     .swiper-pagination {
         width: 10%;
@@ -155,6 +159,9 @@
     height: rem(30);
     position: absolute;
     bottom: -35%;
+    @include to (992px) {
+        bottom: -45%;
+    }
     transform: translateY(-50%);
     color: $white;
     background-color: #c9d2da;
