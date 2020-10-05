@@ -1,6 +1,9 @@
 .btn {
     @include size-sm(6);
     @include size-md(6);
+    @include to (576px) {
+      font-size: rem(16);
+    }
     display: flex;
     justify-content: center;
     align-items: center;

@@ -62,6 +62,9 @@
             font-size: rem(20);
             line-height: rem(26);
             font-weight: 700;
+            @include to (576px) {
+                font-size: rem(18);
+            }
         }
 
         .item-content__text {

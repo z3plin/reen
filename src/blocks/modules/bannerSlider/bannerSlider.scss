@@ -38,7 +38,7 @@
     text-align: center;
     text-transform: uppercase;
     @include to(576px) {
-        font-size: rem(32);
+        font-size: rem(28);
     }
     @include to(768px) {
         font-size: rem(42);
